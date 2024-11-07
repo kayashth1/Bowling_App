@@ -42,23 +42,23 @@ const BirthdayPackages = () => {
         {packages.map((pkg) => (
           <div
             key={pkg.id}
-            className={`bg-[#F72F4F] rounded-[70px] text-center 
-              ${!selectedPackage ? 'w-[45%] p-16' : ''}
-              ${selectedPackage === pkg.id ? 'w-[90%]' : ''}
+            className={`bg-[#F72F4F] rounded-[20px] md:rounded-[70px] text-center 
+              ${!selectedPackage ? 'w-[90%] m-auto md:w-[45%] p-5 md:p-16' : ''}
+              ${selectedPackage === pkg.id ? 'w-[90%] m-auto' : ''}
             `}
           >
             {!selectedPackage && (
               <>
-                <h2 className="text-[48px] leading-[45px] font-bold text-start">
+                <h2 className="text-[32px] md:text-[48px] leading-[40px] md:leading-[45px] font-bold text-start">
                   {pkg.title}
                 </h2>
-                <p className="mt-2 text-start text-[24px] leading-[30px] font-semibold">
+                <p className="mt-5 md:mt-2 text-start text-[16px] md:text-[24px]  leading-[20px] md:leading-[30px] font-semibold">
                   {pkg.description}
                 </p>
                 <div className="flex justify-end">
                   <button
                     onClick={() => setSelectedPackage(pkg.id)}
-                    className="mt-6 p-6 bg-white font-bold text-[24px] leading-[30px] text-black rounded-full "
+                    className="mt-12 px-6 py-4 md:p-6 bg-white font-bold  text-[16px] md:text-[24px] leading-[30px] text-black rounded-full "
                   >
                     Learn More
                   </button>
@@ -66,36 +66,36 @@ const BirthdayPackages = () => {
               </>
             )}
             {selectedPackage === pkg.id ? (
-              <div className="p-16 w-full flex flex-col">
-                <div className="flex">
-                  <div className="div1 w-1/2">
+              <div className="p-4 md:p-16 w-full md:w-full flex flex-col ">
+                <div className="w-full flex flex-col md:flex-row">
+                  <div className="div1 w-full md:w-1/2">
                     <div>
-                      <h2 className="text-[48px] leading-[45px] font-bold text-start">
+                      <h2 className="mt-5 md:mt-2 text-[32px] md:text-[48px] leading-[40px] md:leading-[45px] font-bold text-start">
                         {pkg.title}
                       </h2>
                     </div>
                     <div>
-                      <p className="mt-2 text-start text-[24px] leading-[30px] font-semibold">
+                      <p className="mt-2 text-start text-[16px] md:text-[24px]  leading-[20px] md:leading-[30px] font-semibold">
                         {pkg.description}
                       </p>
                     </div>
                     <div>
-                      <p className="mt-6 flex gap-5 items-center text-start text-[24px] leading-[30px] font-semibold">
-                        <FaUserGroup />
+                      <p className="mt-6 flex gap-5 items-center text-start text-[20px] md:text-[24px] leading-[25px] md:leading-[30px] font-semibold">
+                        <FaUserGroup className="text-[40px] md:text-[32px]" />
                         Minimum {pkg.details.minParticipents} participents
                         required
                       </p>
                     </div>
                   </div>
-                  <div className="div2 w-1/2">
-                    <p className="mt-6 flex gap-5  text-start text-[24px] leading-[30px] font-semibold">
-                      <BsClockFill className="text-[48px]" />
+                  <div className="div2 w-full md:w-1/2">
+                    <p className="mt-6 flex gap-5  text-start text-[20px] md:text-[24px] leading-[25px] md:leading-[30px] font-semibold">
+                      <BsClockFill className="text-[60px] md:text-[48px] " />
                       {pkg.details.time}
                       <br />
                       {pkg.details.activities}
                     </p>
-                    <p className="mt-6 flex gap-5  text-start text-[24px] leading-[30px] font-semibold">
-                      <MdFastfood className="text-[96px]" />
+                    <p className="mt-6 flex gap-5  text-start text-[20px] md:text-[24px] leading-[25px] md:leading-[30px] font-semibold">
+                      <MdFastfood className="text-[120px] md:text-[96px] text-center" />
                       {pkg.details.food}
                     </p>
                   </div>
@@ -103,7 +103,7 @@ const BirthdayPackages = () => {
                 <div className="w-full flex justify-end">
                   <button
                     onClick={() => setSelectedPackage(null)}
-                    className=" mt-6 px-14 py-4 bg-white font-bold text-[24px] leading-[30px] text-black rounded-full"
+                    className="mt-10 md:mt-6 px-10 py-3 md:py-4 md:px-14 bg-white font-bold text-[16px] md:text-[24px] leading-[30px] text-black rounded-full"
                   >
                     Back
                   </button>
