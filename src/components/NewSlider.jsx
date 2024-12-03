@@ -32,10 +32,10 @@ const NewsSlider = () => {
         align: 'start',
         loop: true,
       }}
-      className="w-[90%]"
+      className="w-[80%] md:w-[90%] text-black"
       plugins={[
         Autoplay({
-          delay: 1000,
+          delay: 3000,
         }),
       ]}
     >
@@ -44,15 +44,13 @@ const NewsSlider = () => {
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
             <div className="p-5 flex flex-col gap-4">
               <img className="w-[90%]" src={`${item.imageUrl}`} />
-              <div className="text w-[90%] text-black font-semibold">
+              <div className="text w-[90%] text-black font-semibold text-center">
                 {item.text}
               </div>
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
     </Carousel>
   );
 };

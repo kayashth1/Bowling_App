@@ -7,12 +7,39 @@ const Navbar = () => {
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  const handleAnchorClick = () => {
+    setMenuOpen(false);
+  };
+
+  const navbarItems = [
+    {
+      name: 'Home',
+      id: 'home',
+    },
+    {
+      name: 'News',
+      id: 'news',
+    },
+    {
+      name: 'About Us',
+      id: 'about-us',
+    },
+    {
+      name: 'Packages',
+      id: 'packages',
+    },
+    {
+      name: 'Settings',
+      id: 'settings',
+    },
+  ];
+
   return (
     <div className="navbar flex justify-between md:items-center w-full h-[80px] text-white px-4 md:px-10 pt-4 md:pt-2">
       {/* Left Section: Logo */}
-      <div className="left items-center  md:w-1/4 md:h-full">
+      <div className="left items-center md:w-1/4 md:h-full">
         <div className="logo">
-          <img src="/logo.png" alt="logo" className="w-[70%]" />
+          <img src="/logo.png" alt="logo" className="w-[70%]" loading="eager" />
         </div>
       </div>
 
@@ -20,12 +47,14 @@ const Navbar = () => {
       <div className="w-3/4 hidden md:flex">
         <div className="mid flex w-full">
           <ul className="flex w-full justify-center gap-16 items-center">
-            {['Home', 'News', 'About Us', 'Packages'].map((item) => (
+            {navbarItems.slice(0, -1).map((item, idx) => (
               <li
-                key={item}
-                className="relative group hover:text-[#0596AA] cursor-pointer p-1.5"
+                key={idx}
+                className="relative group hover:text-[#0596AA] cursor-pointer p-1.5 font-semibold"
               >
-                {item}
+                <a onClick={handleAnchorClick} href={`#${item.id}`}>
+                  {item.name}
+                </a>
                 <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[#0596AA] scale-x-0 group-hover:scale-x-100 transition-all duration-300 ease-in-out"></div>
               </li>
             ))}
@@ -45,22 +74,28 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="absolute top-[80px] left-0 w-full bg-gray-800 text-white flex flex-col items-center md:hidden">
-          {['Home', 'News', 'About Us', 'Packages'].map((item) => (
+      {/* Mobile Menu with Animation */}
+      <div
+        className={`absolute top-[80px] left-0 w-full overflow-hidden bg-gray-800 text-white transition-all duration-300 ease-in ${
+          menuOpen ? 'h-[calc(100svh-80px)] py-2' : 'h-0'
+        } flex flex-col justify-center items-center gap-8 md:hidden select-none`}
+      >
+        {menuOpen &&
+          navbarItems.map((item, idx) => (
             <div
-              key={item}
-              className="w-full text-center py-2 border-b border-gray-700 hover:bg-gray-700"
+              key={idx}
+              className="w-full text-2xl text-center py-3 hover:bg-gray-700"
             >
-              {item}
+              <a
+                onClick={handleAnchorClick}
+                href={`#${item.id}`}
+                className="border-b border-b-[#f72f4f]"
+              >
+                {item.name}
+              </a>
             </div>
           ))}
-          <div className="w-full text-center py-2 hover:bg-gray-700">
-            <RiSettingsLine className="text-4xl mx-auto" />
-          </div>
-        </div>
-      )}
+      </div>
     </div>
   );
 };

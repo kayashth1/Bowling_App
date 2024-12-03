@@ -7,6 +7,7 @@ const Homepage = () => {
     <div
       className="relative w-full h-svh lg:h-screen overflow-hidden"
       style={{ fontFamily: 'Montserrat' }}
+      id="home"
     >
       {/* Background Video */}
       <video
@@ -14,6 +15,7 @@ const Homepage = () => {
         autoPlay
         loop
         muted
+        preload="auto"
         className="absolute top-0 left-0 w-full h-full object-cover -z-10 filter brightness-80"
       />
 

@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Slider from '../components/Slider.jsx';
+import { TestContext } from '@/components/Testcontext.jsx';
 
 const AboutUsPage = () => {
-  const [testOpen, setTestOpen] = useState(false);
+  // const [testOpen, setTestOpen] = useState(true);
 
-  const toggleTest = () => {
-    setTestOpen(!testOpen);
-  };
+  const { testOpen, toggleTest } = useContext(TestContext);
+
+  // const toggleTest = () => {
+  //   setTestOpen(!testOpen);
+  // };
 
   return (
     <div
-      className={`about-page relative w-full text-white bg-gradient-to-r from-[#F72F4F] to-[#911C2E] overflow-hidden`}
+      className={`about-page relative w-full text-white bg-gradient-to-r from-[#F72F4F] to-[#911C2E] overflow-hidden
+      `}
+      id="about-us"
     >
       {/* About Us Section */}
-      <div className="about-us w-full xl:pb-20 2xl:pb-32 text-center flex flex-wrap-reverse justify-center md:text-start xl:flex-col-reverse md:flex-row items-center xl:items-end xl:justify-start text-4xl">
+      <div className="about-us pb-12 w-full xl:pb-20 2xl:pb-32 text-center flex flex-wrap-reverse justify-center md:text-start xl:flex-col-reverse md:flex-row items-center xl:items-end xl:justify-start text-4xl">
         <div className="about-text w-[70%]">
           <div className="about-heading text-[90px] leading-[80px] lg:text-[180px] font-Bauhaus93 lg:leading-[180px] text-center md:text-center xl:text-start md:p-10">
             About Us
@@ -40,7 +45,7 @@ const AboutUsPage = () => {
 
       {testOpen && (
         <div
-          className={`test h-1/2 transition-all duration-200 ease-in-out `}
+          className={`test h-1/2 transition-all duration-200 ease-in-out pb-10`}
           style={{ fontFamily: 'Montserrat' }}
         >
           <div className="w-full flex flex-col items-center justify-center h-full text-2xl mt-16 sm:mt-20">
@@ -60,16 +65,6 @@ const AboutUsPage = () => {
           </div>
         </div>
       )}
-
-      {/* Toggle Button */}
-      <div className="flex justify-center mt-4">
-        <button
-          onClick={toggleTest}
-          className="px-4 py-2 bg-gray-700 text-white rounded-full hover:bg-gray-800 transition"
-        >
-          Click me
-        </button>
-      </div>
     </div>
   );
 };

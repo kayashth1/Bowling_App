@@ -5,14 +5,16 @@ function Footer() {
   return (
     <footer
       className="bg-[#001D38] text-white text-[24px] leading-[30px] "
+      id="footer"
       style={{ fontFamily: 'Montserrat' }}
     >
-      <div className="container mx-auto flex flex-col md:flex-row justify-center gap-14 md:gap-20 items-center md:items-start p-10">
+      <div className="container mx-auto flex flex-col md:flex-row justify-center gap-14 md:gap-20 items-center lg:items-start p-10">
         <div className="w-[300px] flex flex-col items-center md:items-start">
           <img
             src="logo.png"
             alt="Brampton Bowling Centre Logo"
             className="w-full mb-4"
+            loading="eager"
           />
           <div className="flex w-full space-x-4 justify-center items-center">
             <a
@@ -32,7 +34,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center gap-10 md:gap-20 text-center md:text-left ">
+        <div className="flex flex-col lg:flex-row justify-center gap-10 lg:gap-20 text-center lg:text-left ">
           <div className="flex flex-col">
             <h3 className="font-bold mb-4 md:text[24px]">News</h3>
             <a
