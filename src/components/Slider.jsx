@@ -9,6 +9,14 @@ import {
   CarouselPrevious,
 } from './ui/carousel';
 
+import t1 from '../../assets/t1.png';
+import t2 from '../../assets/t2.png';
+import t3 from '../../assets/t3.png';
+import t4 from '../../assets/t4.png';
+import t5 from '../../assets/t5.png';
+
+const images = [t1, t2, t3, t4, t5];
+
 export default function CarouselSize() {
   return (
     <Carousel
@@ -24,10 +32,10 @@ export default function CarouselSize() {
       ]}
     >
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
+        {images.map((img, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
             <div className="p-5">
-              <img src={`../../assets/t${index + 1}.png`} />
+              <img src={img} alt={`Slide ${index + 1}`} />
             </div>
           </CarouselItem>
         ))}

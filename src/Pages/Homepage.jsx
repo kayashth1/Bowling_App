@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import video from '../../assets/hero.mp4'
 
 const Homepage = () => {
   return (
@@ -9,9 +10,9 @@ const Homepage = () => {
       style={{ fontFamily: 'Montserrat' }}
       id="home"
     >
-      {/* Background Video */}
+  
       <video
-        src="../../assets/hero.mp4" // Replace with the path or URL of your video
+        src={video}
         autoPlay
         loop
         muted
@@ -19,7 +20,7 @@ const Homepage = () => {
         className="absolute top-0 left-0 w-full h-full object-cover -z-10 filter brightness-80"
       />
 
-      {/* Overlay Content */}
+
       <div className="relative z-10">
         <Navbar />
         <Hero />

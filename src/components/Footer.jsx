@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiFillGoogleCircle } from 'react-icons/ai';
 import { FaFacebook } from 'react-icons/fa';
+import logo from '../../assets/logo.png'
 function Footer() {
   return (
     <footer
@@ -11,7 +12,7 @@ function Footer() {
       <div className="container mx-auto flex flex-col md:flex-row justify-center gap-14 md:gap-20 items-center lg:items-start p-10">
         <div className="w-[300px] flex flex-col items-center md:items-start">
           <img
-            src="../../assets/logo.png"
+            src={logo}
             alt="Brampton Bowling Centre Logo"
             className="w-full mb-4"
             loading="eager"
