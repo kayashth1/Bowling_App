@@ -44,8 +44,12 @@ const BirthdayPackages = () => {
             key={pkg.id}
             className={`bg-[#F72F4F] rounded-[20px] md:rounded-[70px] text-center 
               ${!selectedPackage ? 'w-[90%] m-auto md:w-[45%] p-5 md:p-16' : ''}
-              ${selectedPackage === pkg.id ? 'w-[90%] m-auto' : ''}
-            `}
+              ${selectedPackage === pkg.id ? 'w-[90%] m-auto scale-105' : ''}
+              transition-all duration-500 ease-in-out`}
+            style={{
+              opacity: selectedPackage === pkg.id ? 1 : 0.8,
+              transform: selectedPackage === pkg.id ? 'scale(1.05)' : 'scale(1)',
+            }}
           >
             {!selectedPackage && (
               <>
@@ -66,7 +70,7 @@ const BirthdayPackages = () => {
               </>
             )}
             {selectedPackage === pkg.id ? (
-              <div className="p-4 md:p-16 w-full md:w-full flex flex-col ">
+              <div className="p-4 md:p-16 w-full md:w-full flex flex-col opacity-100 transition-opacity duration-500">
                 <div className="w-full flex flex-col md:flex-row">
                   <div className="div1 w-full md:w-1/2">
                     <div>

@@ -19,7 +19,7 @@ const Hero = () => {
           </span>
         </div>
       </div>
-      <div className="button w-[200px] bg-[#0f96aa] flex justify-center items-center p-3 rounded-[30px] mt-16 ml-3">
+      <div className="button w-[200px] bg-[#0f96aa] flex justify-center mb-[23px] items-center p-3 rounded-[30px] mt-16 ml-3">
         <a
           href="mailto:bramptonbowl@yahoo.ca"
           className="font-semibold h-full w-full outline-none text-center"

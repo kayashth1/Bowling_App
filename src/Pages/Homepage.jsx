@@ -6,7 +6,7 @@ import video from '../../assets/hero.mp4'
 const Homepage = () => {
   return (
     <div
-      className="relative w-full h-svh lg:h-screen overflow-hidden"
+      className="relative w-full lg:h-screen overflow-hidden"
       style={{ fontFamily: 'Montserrat' }}
       id="home"
     >
