@@ -12,15 +12,15 @@ import { CloudCog } from 'lucide-react';
 
 const data = [
   {
-    imageUrl: 'n1.jpg',
+    imageUrl: '../../assets/n1.jpg',
     text: "Starting this September, we're rolling out a fresh fall menu at the Alley Café! Come in and try our seasonal specials, including pumpkin spice lattes and hearty comfort food favorites.",
   },
   {
-    imageUrl: 'n2.jpg',
+    imageUrl: '../../assets/n2.jpg',
     text: "Our leagues are back starting mid-September! On Thursdays from 6:00 PM to 8:30 PM, we'll be almost at full capacity, but 2-3 lanes will still be open for walk-ins. Join us for some 10-pin fun!",
   },
   {
-    imageUrl: 'n3.jpg',
+    imageUrl: '../../assets/n3.jpg',
     text: 'Get ready to glow! Our popular Cosmic Bowling Nights are back every Friday from 9:00 PM. Experience the fun of bowling under black lights, with neon balls, and the latest hits pumping through the speakers.',
   },
 ];

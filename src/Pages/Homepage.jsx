@@ -11,7 +11,7 @@ const Homepage = () => {
     >
       {/* Background Video */}
       <video
-        src="/hero.mp4" // Replace with the path or URL of your video
+        src="../../assets/hero.mp4" // Replace with the path or URL of your video
         autoPlay
         loop
         muted

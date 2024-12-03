@@ -39,7 +39,11 @@ const AboutUsPage = () => {
           </div>
         </div>
         <div className="video mt-[-50px] h-[400px] xl:absolute xl:top-10 xl:right-[-50px] xl:w-[600px] xl:h-[600px]">
-          <img src="/ball_crop.gif" autoPlay className="h-full object-cover" />
+          <img
+            src="../../assets/ball_crop.gif"
+            autoPlay
+            className="h-full object-cover"
+          />
         </div>
       </div>
 

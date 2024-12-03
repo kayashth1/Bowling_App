@@ -11,7 +11,7 @@ function Footer() {
       <div className="container mx-auto flex flex-col md:flex-row justify-center gap-14 md:gap-20 items-center lg:items-start p-10">
         <div className="w-[300px] flex flex-col items-center md:items-start">
           <img
-            src="logo.png"
+            src="../../assets/logo.png"
             alt="Brampton Bowling Centre Logo"
             className="w-full mb-4"
             loading="eager"
