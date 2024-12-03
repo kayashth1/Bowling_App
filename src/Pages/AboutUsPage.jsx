@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Slider from '../components/Slider.jsx';
 import { TestContext } from '@/components/Testcontext.jsx';
+import ball from '../../assets/ball_crop.gif';
 
 const AboutUsPage = () => {
   // const [testOpen, setTestOpen] = useState(true);
@@ -40,7 +41,7 @@ const AboutUsPage = () => {
         </div>
         <div className="video mt-[-50px] h-[400px] xl:absolute xl:top-10 xl:right-[-50px] xl:w-[600px] xl:h-[600px]">
           <img
-            src="../../assets/ball_crop.gif"
+            src={ball}
             autoPlay
             className="h-full object-cover"
           />
