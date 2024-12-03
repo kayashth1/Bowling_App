@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RiSettingsLine, RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { MdMenu } from 'react-icons/md';
+import logo from '../../assets/logo.png';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ const Navbar = () => {
       {/* Left Section: Logo */}
       <div className="left items-center md:w-1/4 md:h-full">
         <div className="logo">
-          <img src="/logo.png" alt="logo" className="w-[70%]" loading="eager" />
+          <img src={logo} alt="logo" className="w-[70%]" loading="eager" />
         </div>
       </div>
 
