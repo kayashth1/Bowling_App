@@ -27,6 +27,10 @@ const data = [
     imageUrl: n3,
     text: 'Get ready to glow! Our popular Cosmic Bowling Nights are back every Friday from 9:00 PM. Experience the fun of bowling under black lights, with neon balls, and the latest hits pumping through the speakers.',
   },
+  {
+    imageUrl: n3,
+    text: 'Get ready to glow! Our popular Cosmic Bowling Nights are back every Friday from 9:00 PM. Experience the fun of bowling under black lights, with neon balls, and the latest hits pumping through the speakers.',
+  },
 ];
 
 const NewsSlider = () => {
@@ -35,6 +39,7 @@ const NewsSlider = () => {
       opts={{
         align: 'start',
         loop: true,
+        containScroll: 'trimSnaps',
       }}
       className="w-[80%] md:w-[90%] text-black"
       plugins={[
@@ -45,7 +50,10 @@ const NewsSlider = () => {
     >
       <CarouselContent>
         {data.map((item, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+          <CarouselItem
+            key={index}
+            className="basis-full sm:basis-[40%] md:basis-[40%] lg:basis-[40%] shrink-0"
+          >
             <div className="p-5 flex flex-col gap-4">
               <img className="w-[90%]" src={item.imageUrl} alt={`Slide ${index + 1}`} />
               <div className="text w-[90%] text-black font-semibold text-center">
@@ -60,3 +68,5 @@ const NewsSlider = () => {
 };
 
 export default NewsSlider;
+
+

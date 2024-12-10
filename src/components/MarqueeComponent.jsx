@@ -7,7 +7,7 @@ const MarqueeComponent = () => {
       style={{ fontFamily: 'Montserrat' }}
     >
       {/* Wrapper for the animations */}
-      <div className="flex animate-marquee whitespace-nowrap">
+      <div className="flex animate-marquee whitespace-nowrap text-[20px] font-semibold">
         <span className="mx-4">
           1500s, when an unknown printer took a galley of type and scrambled it
           to make a type specimen book. It has survived not only five centuries,

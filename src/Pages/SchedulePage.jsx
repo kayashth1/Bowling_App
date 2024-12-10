@@ -1,8 +1,27 @@
 import NewsSlider from '@/components/NewSlider';
 import Timetable from '@/components/Timetable';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+import vector from '../../assets/Vector.png'
+import vector2 from '../../assets/Vector2.png'
 
 import React, { useState } from 'react';
+
+const Vector= () =>{
+  return(
+    <div>
+      <img className='w-[70%]' src= {vector} alt="" />
+    </div>
+  )
+
+}
+const Vector2= () =>{
+  return(
+    <div className='flex justify-end'>
+      <img className='w-[70%] flex justify-end' src= {vector2} alt="" />
+    </div>
+  )
+
+}
 
 const SchedulePage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,12 +48,13 @@ const SchedulePage = () => {
           }}
         >
           <div
-            className={`text-[80px] md:text-[90px] leading-[80px] lg:text-[180px] font-Bauhaus93 lg:leading-[180px] text-[#f72f4f] flex flex-col justify-center font-bold transition-all duration-1000 ease-[ease-in-out] ${
+            className={`text-[80px] md:text-[90px] leading-[80px] lg:text-[180px] font-Bauhaus93 lg:leading-[180px] text-[#f72f4f] flex flex-col justify-center font-bold transition-all duration-1000 ease-[ease-in-out] z-2 ${
               isOpen ? 'md:-rotate-90' : 'md:rotate-0'
             } `}
             style={{
               transitionTimingFunction:
                 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                zIndex:'2',
             }}
           >
             Schedule
@@ -49,16 +69,18 @@ const SchedulePage = () => {
           } bg-white text-white h-full p-4`}
           style={{
             transitionTimingFunction: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+            
           }}
           id="news"
         >
           <div
-            className={`text-end text-[90px] leading-[80px] lg:text-[180px] font-Bauhaus93 lg:leading-[180px] text-[#0f96aa] transition-all duration-1000 ease-[ease-in-out] ${
+            className={`text-end text-[90px] leading-[80px] lg:text-[180px] font-Bauhaus93 lg:leading-[180px] text-[#0f96aa] transition-all duration-1000 ease-[ease-in-out] m-4 md:m-0 ${
               isOpen ? 'md:rotate-0' : 'md:-rotate-90'
             } `}
             style={{
               transitionTimingFunction:
                 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                zIndex:'2',
             }}
           >
             News
@@ -73,15 +95,15 @@ const SchedulePage = () => {
           )}
           <div
             onClick={handleClick}
-            className={`button text-[80px] font-semibold cursor-pointer  absolute flex justify-center items-center w-[72px] h-[72px] left-[50%] translate-x-[-50%] md:translate-x-0 rotate-90 md:rotate-0  md:top-[50%] rounded-[50%]
+            className={`button text-[80px] font-semibold cursor-pointer  absolute flex justify-center items-center w-[90px] h-[100px] left-[50%] translate-x-[-50%] md:translate-x-0 rotate-90 md:rotate-0  md:top-[50%] rounded-[50%]
             ${
               isOpen
-                ? 'text-white bg-[#250e1b] -top-11 md:-left-11'
-                : 'text-[#0f96aa] bg-white -top-6 md:-left-8'
+                ? 'text-white bg-[#250e1b] -top-12 md:-left-14 flex justify-center items-center'
+                : 'text-[#0f96aa] bg-white -top-12 p-4 md:-left-8'
             }
             `}
           >
-            {isOpen ? <MdKeyboardArrowRight /> : <MdKeyboardArrowLeft />}
+            {isOpen ? <Vector2/> : <Vector/> }
           </div>
         </div>
       </div>

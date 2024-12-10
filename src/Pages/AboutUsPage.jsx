@@ -14,7 +14,7 @@ const AboutUsPage = () => {
 
   return (
     <div
-      className={`about-page relative w-full text-white bg-gradient-to-r from-[#F72F4F] to-[#911C2E] overflow-hidden
+      className={`about-page relative w-full text-white bg-gradient-to-r from-[#c24459] to-[#891728] overflow-hidden
       `}
       id="about-us"
     >

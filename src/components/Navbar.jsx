@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RiSettingsLine, RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { MdMenu } from 'react-icons/md';
 import logo from '../../assets/logo.png';
 
@@ -29,48 +29,35 @@ const Navbar = () => {
       name: 'Packages',
       id: 'packages',
     },
-    {
-      name: 'Settings',
-      id: 'settings',
-    },
   ];
 
   return (
-    <div className="navbar flex justify-between md:items-center w-full h-[80px] text-white px-4 md:px-10 pt-4 md:pt-2">
+    <div className="navbar flex justify-between items-center w-full h-[80px] text-white px-4 md:px-10">
       {/* Left Section: Logo */}
-      <div className="left items-center md:w-1/4 md:h-full">
-        <div className="logo">
-          <img src={logo} alt="logo" className="w-[70%]" loading="eager" />
-        </div>
+      <div className="left">
+        <img src={logo} alt="logo" className="w-[70%]" loading="eager" />
       </div>
 
       {/* Middle Section: Links - Visible on larger screens */}
-      <div className="w-3/4 hidden md:flex">
-        <div className="mid flex w-full">
-          <ul className="flex w-full justify-center gap-16 items-center">
-            {navbarItems.slice(0, -1).map((item, idx) => (
-              <li
-                key={idx}
-                className="relative group hover:text-[#0596AA] cursor-pointer p-1.5 font-semibold"
-              >
-                <a onClick={handleAnchorClick} href={`#${item.id}`}>
-                  {item.name}
-                </a>
-                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[#0596AA] scale-x-0 group-hover:scale-x-100 transition-all duration-300 ease-in-out"></div>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="right w-1/4 flex justify-end items-center pr-10">
-          <div className="setting-icon text-4xl cursor-pointer">
-            <RiSettingsLine />
-          </div>
-        </div>
+      <div className="hidden md:flex">
+        <ul className="flex gap-16 items-center mr-[12px]">
+          {navbarItems.map((item, idx) => (
+            <li
+              key={idx}
+              className="relative group hover:text-[#0596AA] cursor-pointer p-1.5 font-semibold w-[98px]"
+            >
+              <a onClick={handleAnchorClick} href={`#${item.id}`} className="relative inline-block">
+                {item.name}
+                <span className="absolute bottom-0 left-0 h-[3px] bg-[#0596AA] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out w-full"></span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Hamburger Menu Icon - Visible on smaller screens */}
-      <div className="md:hidden flex items-center">
-        <button onClick={toggleMenu} className="text-4xl">
+      <div className="md:hidden">
+        <button onClick={toggleMenu} className="text-4xl mr-[4px]">
           {menuOpen ? <RiCloseLine /> : <MdMenu />}
         </button>
       </div>
@@ -78,8 +65,8 @@ const Navbar = () => {
       {/* Mobile Menu with Animation */}
       <div
         className={`absolute top-[80px] left-0 w-full overflow-hidden bg-gray-800 text-white transition-all duration-300 ease-in ${
-          menuOpen ? 'h-[calc(100svh-80px)] py-2' : 'h-0'
-        } flex flex-col justify-center items-center gap-8 md:hidden select-none`}
+          menuOpen ? 'h-[calc(100svh-80px)] py-4' : 'h-0'
+        } flex flex-col justify-center items-center gap-6 md:hidden select-none`}
       >
         {menuOpen &&
           navbarItems.map((item, idx) => (

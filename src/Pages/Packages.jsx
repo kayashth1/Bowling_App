@@ -13,11 +13,14 @@ const Packages = () => {
       id="packages"
     >
       <div
-        onClick={toggleTest}
-        className="button  text-[80px] font-semibold cursor-pointer  absolute flex justify-center items-center w-[72px] h-[72px] bg-[#250e1b] -top-6 translate-x-[-50%] left-[50%] rounded-[50%] "
-      >
-        {testOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
-      </div>
+  onClick={toggleTest}
+  className={`button text-[80px] font-semibold cursor-pointer absolute flex justify-center items-center w-[100px] h-[100px] bg-[#250e1b] ${
+    testOpen ? '-top-12' : '-top-10'
+  } translate-x-[-50%] left-[50%] rounded-[50%]`}
+>
+  {testOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+</div>
+
       <div className="heading text-[70px] sm:text-[90px] leading-[80px] lg:text-[200px] font-Bauhaus93 lg:leading-[180px] text-center pt-10 md:pt-36 text-[#f72f4f]">
         Packages
       </div>
