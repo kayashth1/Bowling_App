@@ -47,22 +47,23 @@ const BirthdayPackages = () => {
               ${selectedPackage === pkg.id ? 'w-[90%] m-auto scale-105' : ''}
               transition-all duration-500 ease-in-out`}
             style={{
-              opacity: selectedPackage === pkg.id ? 1 : 0.8,
-              transform: selectedPackage === pkg.id ? 'scale(1.05)' : 'scale(1)',
+              // opacity: selectedPackage === pkg.id ? 1 : 0.8,
+              transform:
+                selectedPackage === pkg.id ? 'scale(1.05)' : 'scale(1)',
             }}
           >
             {!selectedPackage && (
               <>
-                <h2 className="text-[32px] md:text-[48px] leading-[40px] md:leading-[45px] font-bold text-start">
+                <h2 className="text-[32px] md:text-[48px] lg:h-[135px] xl:h-auto leading-[40px] md:leading-[45px] font-bold text-start">
                   {pkg.title}
                 </h2>
-                <p className="mt-5 md:mt-2 text-start text-[16px] md:text-[24px]  leading-[20px] md:leading-[30px] font-semibold">
+                <p className=" md:pt-6 md:h-[230px] lg:h-[170px] xl:h-[90px] text-start text-[16px] md:text-[24px]  leading-[20px] md:leading-[30px] font-semibold">
                   {pkg.description}
                 </p>
                 <div className="flex justify-end">
                   <button
                     onClick={() => setSelectedPackage(pkg.id)}
-                    className="mt-12 px-6 py-4 md:p-6 bg-white font-bold  text-[16px] md:text-[24px] leading-[30px] text-black rounded-full "
+                    className="mt-8 md:mt-8 lg:mt-4 xl:mt-10 px-6 py-4 md:p-6 bg-white font-bold  text-[16px] md:text-[24px] leading-[30px] text-black rounded-full "
                   >
                     Learn More
                   </button>
