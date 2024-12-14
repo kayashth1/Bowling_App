@@ -31,7 +31,7 @@ const SchedulePage = () => {
   };
 
   return (
-    <div className="flex flex-col w-full md:h-[800px]">
+    <div className="flex flex-col w-full md:h-[800px] " id='schedule-page'>
       <div
         className="flex flex-col md:flex-row items-start h-full w-full transition-all duration-1000 ease-[ease-in-out]"
         style={{

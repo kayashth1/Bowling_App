@@ -56,7 +56,7 @@ const NewsSlider = () => {
           >
             <div className="p-5 flex flex-col gap-4">
               <img className="w-[90%]" src={item.imageUrl} alt={`Slide ${index + 1}`} />
-              <div className="text w-[90%] text-black font-semibold text-center">
+              <div className="text w-[90%] text-black font-semibold text-left">
                 {item.text}
               </div>
             </div>

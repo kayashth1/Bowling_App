@@ -39,12 +39,12 @@ function Footer() {
           <div className="flex flex-col">
             <h3 className="font-bold mb-4 md:text[24px]">News</h3>
             <a
-              href="#"
+              href="#schedule-page"
               className="hover:underline text-[20px] md:text-[22px] text-[#D9D9D9]"
             >
               Schedule
             </a>
-            <a href="#" className="hover:underline text-[#D9D9D9]">
+            <a href="#news" className="hover:underline text-[#D9D9D9]">
               News
             </a>
           </div>

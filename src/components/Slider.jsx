@@ -34,8 +34,8 @@ export default function CarouselSize() {
       <CarouselContent>
         {images.map((img, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <div className="p-5">
-              <img src={img} alt={`Slide ${index + 1}`} />
+            <div className="p-5 ">
+              <img src={img} alt={`Slide ${index + 1}`} style={{ borderRadius: '40px' }} />
             </div>
           </CarouselItem>
         ))}

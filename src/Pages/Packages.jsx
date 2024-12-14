@@ -2,6 +2,25 @@ import React, { useContext } from 'react';
 import BirthdayPackages from '../components/BirthdayPackages';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import { TestContext } from '@/components/Testcontext';
+import uparrow from '../../assets/upaarow.png'
+import downarrow from '../../assets/downarrow.png'
+
+const Up= () =>{
+  return(
+    <div className='flex justify-center mb-1 ' >
+      <img className='w-[70%]' src= {uparrow} alt="" />
+    </div>
+  )
+
+}
+const Down= () =>{
+  return(
+    <div className='flex justify-center '>
+      <img className='w-[70%] ' src= {downarrow} alt="" />
+    </div>
+  )
+
+}
 
 const Packages = () => {
   const { testOpen, toggleTest } = useContext(TestContext);
@@ -14,11 +33,11 @@ const Packages = () => {
     >
       <div
         onClick={toggleTest}
-        className={`button text-[80px] font-semibold cursor-pointer absolute flex justify-center items-center w-[100px] h-[100px] bg-[#250e1b] ${
+        className={`button text-[80px] font-semibold cursor-pointer absolute flex justify-center items-center w-[115px] h-[105px] bg-[#250e1b] ${
           testOpen ? '-top-12' : '-top-10'
         } translate-x-[-50%] left-[50%] rounded-[50%]`}
       >
-        {testOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+        {testOpen ? <Down/>: <Up/>}
       </div>
 
       <div className="heading text-[70px] sm:text-[90px] leading-[80px] lg:text-[200px] font-Bauhaus93 lg:leading-[180px] text-center pt-10 md:pt-36 text-[#f72f4f]">
