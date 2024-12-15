@@ -32,21 +32,30 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="navbar flex justify-between items-center w-full h-[80px] text-white px-4 md:px-10">
+    <div className="navbar flex justify-between items-center w-full h-[80px] text-white sm:px-4 md:px-10">
       {/* Left Section: Logo */}
-      <div className="left">
-        <img src={logo} alt="logo" className="w-[70%]" loading="eager" />
+      <div className="left mt-10  md:mt-0 w-[250px] md:min-w-[200px] md:w-[170px] md:h-[70px] lg:mt-8 lg:w-[300px] lg:h-[100px]">
+        <img
+          src={logo}
+          alt="logo"
+          className="w-full md:size-full"
+          loading="eager"
+        />
       </div>
 
       {/* Middle Section: Links - Visible on larger screens */}
       <div className="hidden md:flex">
-        <ul className="flex gap-16 items-center mr-[12px]">
+        <ul className="flex text-[20px] text-nowrap lg:mt-5 md:gap-8 lg:gap-16 items-center mr-[12px]">
           {navbarItems.map((item, idx) => (
             <li
               key={idx}
               className="relative group hover:text-[#0596AA] cursor-pointer p-1.5 font-semibold w-[98px]"
             >
-              <a onClick={handleAnchorClick} href={`#${item.id}`} className="relative inline-block">
+              <a
+                onClick={handleAnchorClick}
+                href={`#${item.id}`}
+                className="relative inline-block"
+              >
                 {item.name}
                 <span className="absolute bottom-0 left-0 h-[3px] bg-[#0596AA] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out w-full"></span>
               </a>
@@ -57,7 +66,7 @@ const Navbar = () => {
 
       {/* Hamburger Menu Icon - Visible on smaller screens */}
       <div className="md:hidden">
-        <button onClick={toggleMenu} className="text-4xl mr-[4px]">
+        <button onClick={toggleMenu} className="text-4xl mt-[30px] mr-[4px]">
           {menuOpen ? <RiCloseLine /> : <MdMenu />}
         </button>
       </div>

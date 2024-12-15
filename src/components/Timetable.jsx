@@ -13,10 +13,10 @@ const TimetableRow = ({ day, startHour, endHour, startTime, endTime }) => {
 
   let unitWidth = 0;
 
-  if (windowWidth >= 1440) unitWidth = 3.5;
-  else if (windowWidth >= 1280 && windowWidth < 1440) unitWidth = 3.2;
-  else if (windowWidth >= 1024 && windowWidth < 1280) unitWidth = 3;
-  else if (windowWidth >= 768 && windowWidth < 1024) unitWidth = 2;
+  if (windowWidth >= 1440) unitWidth = 2.5;
+  else if (windowWidth >= 1280 && windowWidth < 1440) unitWidth = 2.5;
+  else if (windowWidth >= 1024 && windowWidth < 1280) unitWidth = 2.5;
+  else if (windowWidth >= 768 && windowWidth < 1024) unitWidth = 2.3;
   else if (windowWidth >= 480 && windowWidth < 768) unitWidth = 3;
   else unitWidth = 1.7;
 
@@ -27,7 +27,7 @@ const TimetableRow = ({ day, startHour, endHour, startTime, endTime }) => {
   const emptySpace = gapFromStartingTime * unitWidth;
 
   return (
-    <div className="flex gap-0 md:gap-16 w-full font-semibold p-1">
+    <div className="flex gap-0 md:gap-16 w-full font-semibold p-1 h-[40px] lg:ml-[5vw]">
       <div className="day w-[110px]  flex-shrink-0">{day}</div>
       <div className="w-[calc(100vw - 110px)] flex">
         <div
@@ -103,7 +103,7 @@ const data = [
 const Timetable = ({ isOpen }) => {
   return (
     <div
-      className={`text-white w-full flex flex-col justify-center gap-5 md:gap-0 transition-all duration-500`}
+      className={`text-white w-full flex flex-col justify-center gap-3 md:gap-0 transition-all duration-500`}
       style={{ fontFamily: 'Montserrat' }}
     >
       {data.map((item, index) => (
