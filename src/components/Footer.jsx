@@ -26,7 +26,7 @@ function Footer() {
               <FaFacebook />
             </a>
             <a
-              href="https://google.com"
+              href="https://g.co/kgs/5vZaZoS"
               target="_blank"
               rel="noopener noreferrer"
             >

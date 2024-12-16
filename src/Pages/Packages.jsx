@@ -40,7 +40,7 @@ const Packages = () => {
         {testOpen ? <Down/>: <Up/>}
       </div>
 
-      <div className="heading text-[70px] sm:text-[90px] leading-[80px] lg:text-[200px] font-Bauhaus93 lg:leading-[180px] text-center pt-10 md:pt-36 text-[#f72f4f]">
+      <div className="heading text-[70px] sm:text-[90px] leading-[80px] lg:text-[200px] font-Bauhaus93 lg:leading-[180px] text-center pt-10 md:pt-36 text-[#f72f4f] z-10">
         Packages
       </div>
       <div className="desc w-[80%] text-center pt-10 m-auto text-[20px] sm:text-[24px] leading-[30px] font-semibold text-[#D9D9D9] ">

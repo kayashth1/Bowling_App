@@ -9,17 +9,11 @@ const MarqueeComponent = () => {
       {/* Wrapper for the animations */}
       <div className="flex animate-marquee whitespace-nowrap text-[20px] font-semibold">
         <span className="mx-4">
-          1500s, when an unknown printer took a galley of type and scrambled it
-          to make a type specimen book. It has survived not only five centuries,
-          but also the leap into electronic typesetting, remaining essentially
-          unchanged.
+        We will be open all throughout the winter break despite our displayed hours from 10:30 am to midnight.
         </span>
         {/* Duplicate content to create seamless animation */}
         <span className="mx-4">
-          1500s, when an unknown printer took a galley of type and scrambled it
-          to make a type specimen book. It has survived not only five centuries,
-          but also the leap into electronic typesetting, remaining essentially
-          unchanged.
+        We will be open all throughout the winter break despite our displayed hours from 10:30 am to midnight.
         </span>
       </div>
     </div>

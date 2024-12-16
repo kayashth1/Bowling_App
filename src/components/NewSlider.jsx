@@ -13,8 +13,13 @@ import { CloudCog } from 'lucide-react';
 import n1 from '../../assets/n1.jpg';
 import n2 from '../../assets/n2.jpg';
 import n3 from '../../assets/n3.jpg';
+import n5 from '../../assets/n5.png';
 
 const data = [
+  {
+    imageUrl: n5,
+    text: 'We have open morning and evening time slots for league admins to arrange leagues. Contact for more details. We do Corporate Parties, School Trips, Team events and Private Parties. Contact for more details.',
+  },
   {
     imageUrl: n1,
     text: "Starting this September, we're rolling out a fresh fall menu at the Alley Café! Come in and try our seasonal specials, including pumpkin spice lattes and hearty comfort food favorites.",
@@ -27,10 +32,7 @@ const data = [
     imageUrl: n3,
     text: 'Get ready to glow! Our popular Cosmic Bowling Nights are back every Friday from 9:00 PM. Experience the fun of bowling under black lights, with neon balls, and the latest hits pumping through the speakers.',
   },
-  {
-    imageUrl: n3,
-    text: 'Get ready to glow! Our popular Cosmic Bowling Nights are back every Friday from 9:00 PM. Experience the fun of bowling under black lights, with neon balls, and the latest hits pumping through the speakers.',
-  },
+ 
 ];
 
 const NewsSlider = () => {

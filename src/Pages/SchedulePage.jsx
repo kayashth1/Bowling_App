@@ -1,8 +1,8 @@
 import NewsSlider from '@/components/NewSlider';
 import Timetable from '@/components/Timetable';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
-import vector from '../../assets/Vector.png';
-import vector2 from '../../assets/Vector2.png';
+import vector from '../../assets/Vector (1).png';
+import vector2 from '../../assets/Vector (2).png';
 
 import React, { useState } from 'react';
 
@@ -95,7 +95,7 @@ const SchedulePage = () => {
             className={`button text-[80px] font-semibold cursor-pointer  absolute flex justify-center items-center w-[90px] h-[100px] left-[50%] translate-x-[-50%] md:translate-x-0 rotate-90 md:rotate-0  md:top-[50%] rounded-[50%]
             ${
               isOpen
-                ? 'text-white bg-[#250e1b] -top-12 md:-left-14 flex justify-center items-center'
+                ? 'text-white bg-[#250e1b] -top-12 md:left-[-3.9rem] flex justify-center items-center'
                 : 'text-[#0f96aa] bg-white -top-12 p-4 md:-left-8'
             }
             `}
