@@ -44,7 +44,7 @@ const Navbar = () => {
       </div>
 
       {/* Middle Section: Links - Visible on larger screens */}
-      <div className="hidden md:flex">
+      <div className="hidden md:flex md:mr-[15px] lg:mr-[32px]">
         <ul className="flex text-[20px] text-nowrap lg:mt-5 md:gap-8 lg:gap-16 items-center mr-[12px]">
           {navbarItems.map((item, idx) => (
             <li
