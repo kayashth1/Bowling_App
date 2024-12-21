@@ -29,18 +29,10 @@ const AboutUsPage = () => {
       className="about-desc w-[100%] sm:w-[87%] text-[16px] leading-[20px] font-semibold sm:px-5 m-auto mt-10 text-center xl:text-start md:pl-12 md:m-0 md:text-[24px] md:leading-[30px] md:mt-0"
       style={{ fontFamily: 'Montserrat' }}
     >
-      At our bowling alley, our manager, Rizwan, is dedicated to ensuring
-      an exceptional customer experience. With a focus on maintaining our
-      brand&apos;s high standards, Rizwan fosters a welcoming atmosphere
-      where fun and enjoyment are paramount. His approach to customer
-      relations emphasizes personal connections and attentive service.
-      Under his leadership, our team of enthusiastic staff members goes
-      above and beyond to ensure every guest leaves with a smile,
-      providing top-notch service and creating memorable experiences for
-      all who visit.
+     Welcome to Brampton Bowling Centre, a family-owned establishment since the 1960s. We pride ourselves on providing a welcoming atmosphere where everyone can have fun. Our mission is to blend vintage charm with modern bowling technology, creating a nostalgic and exciting experience for all ages. Our dedicated hosts offer exceptional customer service and genuine hospitality, making every visit memorable. Join us for a casual game, party, or league night and become part of a community that values togetherness and good times, where tradition meets innovation and every roll brings friends and families closer together.
     </div>
   </div>
-  <div className="video mt-[-50px] h-[400px] xl:absolute xl:top-14 xl:right-[-101px] xl:w-[600px] xl:h-[600px]">
+  <div className="video mt-[-50px] h-[400px] xl:absolute xl:top-16 xl:right-[-101px] xl:w-[600px] xl:h-[600px]">
   <img
   src={ballnew}
   
