@@ -16,6 +16,7 @@ const Homepage = () => {
         loop
         muted
         preload="auto"
+        playsInline
         className="absolute top-0 left-0 w-full h-full object-cover -z-10 filter brightness-80"
       />
 
