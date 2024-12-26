@@ -16,7 +16,7 @@ const BirthdayPackages = () => {
         minParticipents: 10,
         time: '2 Hours Total',
         activities: '1 Hour of Bowling and Shoe Rental + 1 Hour of Party Space',
-        food: '2 Slices of Pizza per participant, Unlimited Fountain Drinks (as available), 1 Bag of Chips per participant',
+        food: '2 Slices of Pizza per participant, Unlimited Fountain Drinks (as available)',
       },
     },
     {
@@ -25,7 +25,7 @@ const BirthdayPackages = () => {
       description:
         'Perfect for Little Hands: Enjoy a Fun-Filled Birthday with Our Exciting 5-Pin Bowling Experience!',
       details: {
-        minParticipents: 5,
+        minParticipents: 10,
         time: '2 Hours Total',
         activities: '1 Hour of Bowling and Shoe Rental + 1 Hour of Party Space',
         food: '2 Slices of Pizza per participant, Unlimited Fountain Drinks (as available), 1 Bag of Chips per participant',
