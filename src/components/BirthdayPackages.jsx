@@ -16,7 +16,7 @@ const BirthdayPackages = () => {
         minParticipents: 10,
         time: '2 Hours Total',
         activities: '1 Hour of Bowling and Shoe Rental + 1 Hour of Party Space',
-        food: '2 Slices of Pizza per participant, Unlimited Fountain Drinks (as available)',
+        food: '2 Slices of Pizza per participant, 1 Drink of choice (as available)',
       },
     },
     {
