@@ -51,9 +51,9 @@ const TimetableRow = ({ day, startHour, endHour, startTime, endTime }) => {
 const data = [
   {
     day: 'Monday',
-    startHour: 12,
+    startHour: 10,
     endHour: 24,
-    startTime: '12 PM',
+    startTime: '10 AM',
     endTime: '12 AM',
   },
   {
