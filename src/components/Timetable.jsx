@@ -31,6 +31,7 @@ const TimetableRow = ({ day, startHour, endHour, startTime, endTime }) => {
       <div className="day w-[110px]  flex-shrink-0">{day}</div>
       <div className="w-[calc(100vw - 110px)] flex">
         <div
+        role="presentation"
           className={`emptySpace`}
           style={{ width: `${emptySpace}vw` }}
         ></div>

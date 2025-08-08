@@ -22,6 +22,7 @@ function Footer() {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
+               aria-label="Facebook"
             >
               <FaFacebook />
             </a>
@@ -29,6 +30,7 @@ function Footer() {
               href="https://g.co/kgs/5vZaZoS"
               target="_blank"
               rel="noopener noreferrer"
+               aria-label="Google"
             >
               <AiFillGoogleCircle className="text-[27px]" />
             </a>

@@ -46,7 +46,7 @@ const NewsSlider = () => {
       plugins={[
         Autoplay({
           delay: 3000,
-          stopOnInteraction: false, // Ensures continuous autoplay
+          stopOnInteraction: false, 
         }),
       ]}
     >
