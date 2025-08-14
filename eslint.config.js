@@ -1,40 +1,33 @@
-import js from '@eslint/js';
-import globals from 'globals';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
+import js from "@eslint/js";
+import globals from "globals";
+import pluginReact from "eslint-plugin-react";
+import pluginReactHooks from "eslint-plugin-react-hooks";
+import pluginJsxA11y from "eslint-plugin-jsx-a11y";
+import { defineConfig } from "eslint/config";
+import { fixupConfigRules, fixupPluginRules } from "@eslint/compat";
 
-export default [
-  { ignores: ['dist'] },
+export default defineConfig([
   {
-    files: ['**/*.{js,jsx}'],
+    files: ["**/*.{js,mjs,cjs,jsx}"],
     languageOptions: {
-      ecmaVersion: 2020,
       globals: globals.browser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module',
-      },
     },
-    settings: { react: { version: '18.3' } },
     plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
+      js,
+      react: pluginReact,
+      "react-hooks": fixupPluginRules(pluginReactHooks),
+      "jsx-a11y": fixupPluginRules(pluginJsxA11y),
     },
+    extends: [
+      js.configs.recommended,
+      pluginReact.configs.flat.recommended,
+      fixupConfigRules(pluginReactHooks.configs.recommended),
+      fixupConfigRules(pluginJsxA11y.configs.recommended),
+    ],
     rules: {
-      ...js.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
-      ...reactHooks.configs.recommended.rules,
-      'react/jsx-no-target-blank': 'off',
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-      'no-unused-vars': 'off',
-      'react/prop-types': 'off',
+      "react/react-in-jsx-scope": "off", // Not needed in React 17+
+      "no-unused-vars": "warn",
+      semi: ["error", "always"],
     },
   },
-];
+]);

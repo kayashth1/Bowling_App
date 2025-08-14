@@ -19,4 +19,14 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './src/setupTests.jsx',
   },
+  coverage: {
+      provider: 'v8',  // use Node's V8 coverage
+      reporter: ['text', 'html'], // text in console + HTML report
+      reportsDirectory: './coverage',
+      exclude: [
+        'node_modules/',
+        'vite.config.*',
+        '**/types/**',
+      ]
+    }
 });
