@@ -52,16 +52,16 @@ const TimetableRow = ({ day, startHour, endHour, startTime, endTime }) => {
 const data = [
   {
     day: 'Monday',
-    startHour: 10,
+    startHour: 13,
     endHour: 24,
-    startTime: '10 AM',
+    startTime: '1 PM',
     endTime: '12 AM',
   },
   {
     day: 'Tuesday',
-    startHour: 12,
+    startHour: 13,
     endHour: 24,
-    startTime: '12 PM',
+    startTime: '1 PM',
     endTime: '12 AM',
   },
   {
@@ -94,9 +94,9 @@ const data = [
   },
   {
     day: 'Sunday',
-    startHour: 10,
+    startHour: 10.5,
     endHour: 25,
-    startTime: '10 AM',
+    startTime: '10:30 AM',
     endTime: '1 AM',
   },
 ];
