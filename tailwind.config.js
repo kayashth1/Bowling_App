@@ -13,12 +13,12 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
       },
       animation: {
-        marquee: 'marquee 10s linear infinite',
+        marquee: 'marquee 18s linear infinite',
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(60%)' },
-          '100%': { transform: 'translateX(-30%)' },
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
       colors: {
