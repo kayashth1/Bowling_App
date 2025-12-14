@@ -102,7 +102,7 @@ function Footer() {
       </div>
 
       <div className="border-t border-gray-500 mt-8 py-8 text-center text-xs ">
-        © 2023 Brampton Bowling Centre | All rights reserved
+        © 2025 Brampton Bowling Centre | All rights reserved
       </div>
     </footer>
   );

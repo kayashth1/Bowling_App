@@ -9,7 +9,7 @@ const MarqueeComponent = () => {
       {/* Wrapper for the animations */}
       <div className="flex animate-marquee whitespace-nowrap text-[20px] font-semibold">
         <span className="mx-4">
-        WE ARE OPEN EARLY FOR VICTORIA DAY.
+        We have extended hours throughout the winter break 10Am-1Am everyday including Christmas and New Year’s.
         </span>
         {/* Duplicate content to create seamless animation */}
         {/* <span className="mx-4">
