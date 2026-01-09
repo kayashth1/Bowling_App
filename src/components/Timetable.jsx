@@ -52,37 +52,37 @@ const TimetableRow = ({ day, startHour, endHour, startTime, endTime }) => {
 const data = [
   {
     day: 'Monday',
-    startHour: 10,
-    endHour: 25,
-    startTime: '10 AM',
-    endTime: '1 AM',
+    startHour: 13,
+    endHour: 24.5,
+    startTime: '1 PM',
+    endTime: '12:30 AM',
   },
   {
     day: 'Tuesday',
-    startHour: 10,
-    endHour: 25,
-    startTime: '10 AM',
-    endTime: '1 AM',
+    startHour: 13,
+    endHour: 24,
+    startTime: '1 PM',
+    endTime: '12 AM',
   },
   {
     day: 'Wednesday',
-    startHour: 10,
-    endHour: 25,
-    startTime: '10 AM',
-    endTime: '1 AM',
+    startHour: 17,
+    endHour: 23.5,
+    startTime: '5 PM',
+    endTime: '11:30 PM',
   },
   {
     day: 'Thursday',
-    startHour: 10,
-    endHour: 25,
-    startTime: '10 AM',
-    endTime: '1 AM',
+    startHour: 17,
+    endHour: 24.5,
+    startTime: '5 PM',
+    endTime: '12:30 AM',
   },
   {
     day: 'Friday',
-    startHour: 10,
+    startHour: 17,
     endHour: 25,
-    startTime: '10 AM',
+    startTime: '5 PM',
     endTime: '1 AM',
   },
   {
@@ -100,6 +100,7 @@ const data = [
     endTime: '1 AM',
   },
 ];
+
 
 const Timetable = ({ isOpen }) => {
   return (
