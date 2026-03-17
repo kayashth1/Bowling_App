@@ -9,7 +9,7 @@ const MarqueeComponent = () => {
       {/* Animated track */}
       <div className="marquee-track flex">
         <span className="mx-8 text-xl font-semibold whitespace-nowrap">
-          We have extended hours throughout the winter break 10 AM – 1 AM everyday including Christmas and New Year’s.
+          We have extended hours throughout the March break 10 AM – 1 AM everyday.
         </span>
         <span className="mx-8 text-xl font-semibold whitespace-nowrap">
           We have extended hours throughout the winter break 10 AM – 1 AM everyday including Christmas and New Year’s.
