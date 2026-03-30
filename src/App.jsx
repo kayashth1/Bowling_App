@@ -10,7 +10,7 @@ import MarqueeComponent from './components/MarqueeComponent';
 export default function App() {
   return (
     <TestProvider>
-      <MarqueeComponent />
+      {/* <MarqueeComponent /> */}
       <Homepage />
       <SchedulePage />
       <AboutUsPage />
